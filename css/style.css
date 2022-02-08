@@ -1,6 +1,43 @@
+:root {
+  --accent: #01565b;
+  --green: #828282;
+  --hover: #4C9CA5;
+}
+
+@font-face {
+  font-family: Quicky; /* Имя шрифта */
+  src: url(fonts/QUICKY.TTF); /* Путь к файлу со шрифтом */
+}
+/* GLOBAL */
+
+body {
+  font-family: "Comfortaa", cursive;
+}
 .container {
   padding: 0 10px;
 }
+.accent-btn {
+  /* display: inline-block; */
+  background-color: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 29px 60px;
+  box-shadow: 9px 7px 23px rgba(0, 0, 0, 0.25), inset 0px 3px 5px rgba(255, 255, 255, 0.45),
+    inset 0px -3px 4px rgba(0, 0, 0, 0.25);
+    transition: color 0.3s;
+}
+.accent-btn:hover{
+  background-color: var(--hover);
+}
+.accent-btn-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+
+}
+/* HEADER */
 
 .menu-btn {
   display: block;
@@ -14,7 +51,7 @@
   display: inline-block;
   width: 40px;
   height: 4px;
-  background-color: #828282;
+  background-color: var(--green);
   border-radius: 2px;
 }
 
@@ -23,7 +60,7 @@
   position: absolute;
   width: 40px;
   height: 4px;
-  background-color: #828282;
+  background-color: var(--green);
   border-radius: 2px;
   bottom: 0;
 }
@@ -33,15 +70,13 @@
   position: absolute;
   width: 40px;
   height: 4px;
-  background-color: #828282;
+  background-color: var(--green);
   border-radius: 2px;
   bottom: 0;
   top: 0;
 }
 
 .menu {
-  /* display: none; */
-  font-family: "Comfortaa", cursive;
   font-weight: 600;
   font-size: 18px;
   line-height: 20px;
@@ -49,17 +84,17 @@
   position: absolute;
   text-align: center;
   width: 100%;
-  background-color: #01565b;
+  background-color: var(--accent);
   color: #fff;
   top: 0;
   left: 0;
   right: 0;
   padding: 100px 0;
   -webkit-transform: translateY(-500px);
-          transform: translateY(-500px);
+  transform: translateY(-500px);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  z-index: -2;
+  z-index: 1;
 }
 
 .menu li {
@@ -68,12 +103,15 @@
 
 .menu-active {
   -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 .header {
+  position: absolute;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 10px 0;
+  z-index: 1000;
 }
 
 .header__box {
@@ -81,11 +119,40 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: 10;
 }
-/*# sourceMappingURL=style.css.map */
+
+/* END HEADER */
+
+/* HEAD */
+.head {
+  background: linear-gradient(180deg, #aea2be 0%, rgba(196, 196, 196, 0) 100%);
+  padding-top: 80px;
+  text-align: center;
+}
+.head__descr {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27px;
+  color: var(--accent);
+}
+.head__box {
+  position: relative;
+}
+.head__box h1 {
+  position: absolute;
+  color: #fff;
+  font-family: "Quicky";
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 100%;
+  text-align: left;
+  padding-left: 55px;
+}
+
+/* END HEAD */
