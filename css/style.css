@@ -12,6 +12,7 @@
 
 body {
   font-family: "Comfortaa", cursive;
+  overflow-x: hidden;
 }
 .container {
   
@@ -50,6 +51,8 @@ body {
 
 .menu-btn span {
   display: inline-block;
+  margin-top: -2px;
+vertical-align: middle;
   width: 40px;
   height: 4px;
   background-color: var(--green);
@@ -147,6 +150,12 @@ body {
 }
 .head__box h1 {
   position: absolute;
+  /* display: inline-block; */
+  max-width: 220px;
+  margin: 0 auto;
+  left: -100px;
+  right: 0;
+  top: 50px;
   color: #fff;
   font-family: "Quicky";
   font-weight: 500;
